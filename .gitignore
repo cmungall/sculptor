@@ -1,0 +1,4 @@
+target/*
+test/data/*.owl
+test/data/*.obo
+
