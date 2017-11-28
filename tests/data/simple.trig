@@ -1,0 +1,30 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prob: <http://semanticscience.org/resource/SIO_000638> .
+
+
+    :a rdfs:subClassOf :b .
+    :b rdfs:subClassOf :c .
+    :a2 rdfs:subClassOf :b2 .
+    :b2 rdfs:subClassOf :c2 .
+
+    :a rdfs:isDefinedBy :ont1 .
+    :b rdfs:isDefinedBy :ont1 .
+    :a2 rdfs:isDefinedBy :ont2 .
+    :b2 rdfs:isDefinedBy :ont2 .
+
+    :g1 prob: "0.9"^^xsd:float .
+    :g2 prob: "0.8"^^xsd:float .
+    
+
+    :g1 {
+    :a owl:equivalentClass :a2 .
+    }
+    :g2 {
+    :a owl:equivalentClass :b2 .
+    }
+    
