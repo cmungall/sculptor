@@ -2,12 +2,13 @@
 
 :- use_module(library(sculptor/kboom)).
 
-:- debug(index).
-:- debug(kboom).
-:- debug(search).
+:- nodebug.
+%:- debug(index).
+%:- debug(kboom).
+%:- debug(search).
 %:- debug(xsearch).
 %:- debug(xlearn).
-:- debug(query).
+%:- debug(query).
 %:- debug(xquery).
 
 test(kboom) :-
